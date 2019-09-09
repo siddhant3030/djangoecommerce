@@ -1,0 +1,70 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# Jacques Moulin <jacques@tpi.be>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-28 19:55-0600\n"
+"PO-Revision-Date: 2008-11-02 17:51+0100\n"
+"Last-Translator: Jacques Moulin <jacques@tpi.be>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: forms.py:32
+msgid "Title"
+msgstr "Titre"
+
+#: forms.py:33
+msgid "Email address"
+msgstr "Email"
+
+#: forms.py:35
+msgid "Password (again)"
+msgstr "Mot de passe (bis)"
+
+#: forms.py:37
+msgid "Password"
+msgstr "Mot de passe"
+
+#: forms.py:39
+msgid "First name"
+msgstr "Prénom"
+
+#: forms.py:41
+msgid "Last name"
+msgstr "Nom"
+
+#: forms.py:60
+msgid "Newsletter"
+msgstr "Lettre d'information"
+
+#: forms.py:69
+msgid "The two passwords do not match."
+msgstr "Les 2 mots de passe diffèrent."
+
+#: forms.py:80
+msgid "That email address is already in use."
+msgstr "Cette adresse email est déjà utilisée."
+
+#: mail.py:24
+#, python-format
+msgid "Welcome to %s"
+msgstr "Bienvenue sur %s"
+
+#: views.py:26
+msgid "Yes"
+msgstr "Oui"
+
+#: views.py:27
+msgid "No"
+msgstr "Non"
+
+#: views.py:343
+msgid "Registration Form"
+msgstr "Formulaire d'enregistrement"

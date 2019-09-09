@@ -1,0 +1,37 @@
+{% load i18n satchmo_currency satchmo_order %}
+
+{% block salutation %}{% with order.contact.first_name as first_name %}{% with order.contact.last_name as last_name %}{% blocktrans %}Dear {{ first_name }} {{ last_name }},{% endblocktrans %}{% endwith %}{% endwith %}{% endblock %}
+
+{% blocktrans %}Thank you for ordering with {{ shop_name }}.{% endblocktrans %}
+
+{% trans "Your order is summarized below:" %}
+
+{% block order_details %}{% include "shop/email/_order_detail.txt" %}{% endblock order_details %}{% comment %}
+    Whitespace for readibility. Hidden, so that we only have two newlines before
+    the next block.
+{% endcomment %}
+{% block order_details_payment %}{% trans "Payment" %}
+-------
+{% block order_details_payment_body %}
+{% spaceless %}
+{% for payment in order.payments_completed %}
+{% if payment.credit_card %}
+{% trans "Your" %} {{payment.credit_card.get_credit_type_display}} {% trans "ending in" %} {{payment.credit_card.display_cc}} {% trans "will be charged" %} {{payment.amount|currency}}
+{% else %}
+{{ payment.get_payment_display }} {% trans "will be charged" %} {{ payment.amount|currency }}
+{% endif %}
+{% endfor %}
+{% endspaceless %}
+{% endblock order_details_payment_body %}
+{% endblock order_details_payment %}
+{% if order.has_downloads %}
+{% trans "Your order contains products that can be downloaded" %}
+{% trans "Please click the link to begin the download" %}
+{% for download in order.downloadlink_set.all %}
+{{ download.product_name }}: {{download.get_full_url}}
+{% endfor %}
+{% endif %}
+
+{% block valediction %}{% trans "Regards" %},
+
+{% trans "Store Management" %}{% endblock%}

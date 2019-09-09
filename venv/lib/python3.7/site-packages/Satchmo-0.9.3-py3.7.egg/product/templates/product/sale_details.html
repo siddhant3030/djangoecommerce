@@ -1,0 +1,10 @@
+{% load i18n %}
+
+<tr class="saleprice">
+  <td>&nbsp;</td>
+  <td>
+    {% blocktrans with pct=sale.percentage_text code=sale.code desc=sale.description enddate=sale.endDate|date:"y-M-d" %}
+      <p>Products in your cart are eligible to receive a discount of {{ pct }} when you enter the code "{{ code }}" during our {{ desc }} which ends on {{ enddate }}.</p>
+    {% endblocktrans %}
+  </td>
+</tr>

@@ -1,0 +1,1145 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the PACKAGE package.
+# N.L. <kotorinl@yahoo.co.uk>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Satchmo svn\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-28 19:57-0600\n"
+"PO-Revision-Date: 2008-04-30 23:35+0100\n"
+"Last-Translator: N.L. <kotorinl@yahoo.co.uk>\n"
+"Language-Team: Group\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Basepath: ../../../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: SWEDEN\n"
+
+#: config.py:9
+msgid "Only authenticated users can check out"
+msgstr ""
+
+#: config.py:10
+msgid ""
+"Users will be required to authenticate (and create an account if neccessary) "
+"before checkout."
+msgstr ""
+
+#: config.py:18
+msgid "Required billing data"
+msgstr ""
+
+#: config.py:20
+msgid ""
+"Users may be required to provide some set of billing address. Other fields "
+"are optional. You may shorten the checkout process here, but be careful, as "
+"this may leave you orders with almost no customer data! Some payment modules "
+"may override this setting."
+msgstr ""
+
+#: config.py:26 config.py:50 forms.py:25 models.py:144
+msgid "Email"
+msgstr "E-post"
+
+#: config.py:27 forms.py:26 models.py:137
+#, fuzzy
+msgid "Title"
+msgstr "Totalt"
+
+#: config.py:28 models.py:138 templates/contact/update_form.html:56
+msgid "First name"
+msgstr "Förnamn"
+
+#: config.py:29 models.py:139 templates/contact/update_form.html:59
+msgid "Last name"
+msgstr "Efternamn"
+
+#: config.py:30 forms.py:29
+msgid "Phone"
+msgstr "Telefon"
+
+#: config.py:31 forms.py:30 forms.py:38 models.py:277
+#, fuzzy
+msgid "Addressee"
+msgstr "Adressbok"
+
+#: config.py:32 forms.py:31 models.py:93 models.py:142
+#: templates/contact/update_form.html:62
+msgid "Organization"
+msgstr "Organisation"
+
+#: config.py:33 forms.py:32 forms.py:39 models.py:278 models.py:279
+#: templates/contact/login_signup_address.html:131
+#: templates/contact/login_signup_address.html:134
+#: templates/contact/login_signup_address.html:165
+#: templates/contact/login_signup_address.html:168
+#: templates/contact/update_form.html:84 templates/contact/update_form.html:87
+#: templates/contact/update_form.html:118
+#: templates/contact/update_form.html:121
+msgid "Street"
+msgstr "Gata"
+
+#: config.py:34
+msgid "Street (second line)"
+msgstr ""
+
+#: config.py:35 forms.py:34 forms.py:41 models.py:281
+#: templates/contact/login_signup_address.html:137
+#: templates/contact/login_signup_address.html:171
+#: templates/contact/update_form.html:90
+#: templates/contact/update_form.html:124
+msgid "City"
+msgstr "Ort"
+
+#: config.py:36 templates/contact/login_signup_address.html:142
+#: templates/contact/login_signup_address.html:145
+#: templates/contact/login_signup_address.html:176
+#: templates/contact/login_signup_address.html:179
+#: templates/contact/update_form.html:95 templates/contact/update_form.html:98
+#: templates/contact/update_form.html:129
+#: templates/contact/update_form.html:132
+msgid "State/Province"
+msgstr "Delstat/landsdel"
+
+#: config.py:37
+msgid "Postal code/ZIP"
+msgstr ""
+
+#: config.py:38 forms.py:76 forms.py:77 models.py:283
+#: templates/contact/login_signup_address.html:153
+#: templates/contact/login_signup_address.html:187
+#: templates/contact/update_form.html:106
+#: templates/contact/update_form.html:140
+msgid "Country"
+msgstr "Land"
+
+#: config.py:46
+msgid "Account Verification"
+msgstr "Bekräftelse av konto"
+
+#: config.py:47
+msgid ""
+"Select the style of account verification.  'Immediate' means no verification "
+"needed."
+msgstr ""
+"Välj typen av kontobekräftelse. 'Direkt' innebär att bekräftelse ej är "
+"nödvändig."
+
+#: config.py:49
+msgid "Immediate"
+msgstr "Direkt"
+
+#: config.py:56
+msgid "Days to verify account"
+msgstr "Dagar på sig att bekräfta konto"
+
+#: forms.py:27
+#, fuzzy
+msgid "First Name"
+msgstr "Förnamn"
+
+#: forms.py:28
+#, fuzzy
+msgid "Last Name"
+msgstr "Efternamn"
+
+#: forms.py:35 forms.py:42 forms.py:70 forms.py:71 models.py:280
+msgid "State"
+msgstr "Delstat"
+
+#: forms.py:36 forms.py:43
+#, fuzzy
+msgid "ZIP code/Postcode"
+msgstr "Postnummer"
+
+#: forms.py:37 templates/contact/login_signup_address.html:159
+#: templates/contact/update_form.html:112
+msgid "Shipping same as billing?"
+msgstr "Leveransadress samma som fakturaadress?"
+
+#: forms.py:66
+#, fuzzy
+msgid "---Please Select---"
+msgstr "Var god välj"
+
+#: forms.py:96 forms.py:147 forms.py:174 forms.py:187 forms.py:201
+msgid "This field is required."
+msgstr "Detta fält är obligatoriskt."
+
+#: forms.py:97
+msgid "State is required for your country."
+msgstr "Delstat krävs för ditt land."
+
+#: forms.py:102
+msgid "Invalid state or province."
+msgstr ""
+
+#: forms.py:117
+msgid "That email address is already in use."
+msgstr "Den e-postadressen är redan upptagen."
+
+#: forms.py:191
+msgid "Shipping and Billing countries must match"
+msgstr "Land för leveransadress och fakturaadress måste vara samma"
+
+#: forms.py:392 templates/contact/update_form.html:73
+msgid "Newsletter"
+msgstr "Nyhetsbrev"
+
+#: models.py:19 models.py:27 models.py:38 models.py:45
+msgid "Key"
+msgstr "Nyckel"
+
+#: models.py:20 models.py:28 models.py:39 models.py:46 models.py:75
+msgid "Name"
+msgstr "Namn"
+
+#: models.py:34
+#, fuzzy
+msgid "Contact organization type"
+msgstr "Kontaktinformation"
+
+#: models.py:76 models.py:225
+msgid "Type"
+msgstr "Typ"
+
+#: models.py:77 models.py:141
+msgid "Role"
+msgstr "Roll"
+
+#: models.py:78
+msgid "Creation Date"
+msgstr "Skapat datum"
+
+#: models.py:79 models.py:145 supplier/models.py:38 supplier/models.py:83
+msgid "Notes"
+msgstr "Anteckningar"
+
+#: models.py:94
+msgid "Organizations"
+msgstr "Organisationer"
+
+#: models.py:143
+msgid "Date of birth"
+msgstr "Födelsedatum"
+
+#: models.py:146
+msgid "Creation date"
+msgstr "Skapat datum"
+
+#: models.py:209 models.py:224
+msgid "Contact"
+msgstr "Kontakt"
+
+#: models.py:210
+msgid "Contacts"
+msgstr "Kontakter"
+
+#: models.py:213
+msgid "Work"
+msgstr "Arbete"
+
+#: models.py:214 templates/contact/login_signup.html:9
+#: templates/contact/update_form.html:5 templates/contact/view_profile.html:6
+#: templates/registration/account_info.html:5
+#: templates/registration/activate.html:6 templates/registration/login.html:5
+#: templates/registration/logout.html:5
+#: templates/registration/password_change_done.html:5
+#: templates/registration/password_change_form.html:5
+#: templates/registration/password_reset_done.html:5
+#: templates/registration/password_reset_form.html:5
+#: templates/registration/registration_complete.html:6
+#: templates/registration/registration_form.html:5
+#: templates/registration/repeat_activation.html:5
+msgid "Home"
+msgstr "Hem"
+
+#: models.py:215
+msgid "Fax"
+msgstr "Fax"
+
+#: models.py:216
+msgid "Mobile"
+msgstr "Mobil"
+
+#: models.py:226
+msgid "Date and Time"
+msgstr "Datum och tid"
+
+#: models.py:227 models.py:241 models.py:275 supplier/models.py:18
+msgid "Description"
+msgstr "Beskrivning"
+
+#: models.py:233
+msgid "Interaction"
+msgstr "Interaktion"
+
+#: models.py:234
+msgid "Interactions"
+msgstr "Interaktioner"
+
+#: models.py:243 models.py:267
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: models.py:245
+msgid "Primary"
+msgstr "Huvudsakligt"
+
+#: models.py:268
+msgid "Phone Numbers"
+msgstr "Telefonnummer"
+
+#: models.py:276
+msgid "Description of address - Home, Office, Warehouse, etc."
+msgstr "Beskrivning av adressen - Hem, Kontor, Lager, etc."
+
+#: models.py:282
+msgid "Zip Code"
+msgstr "Postnummer"
+
+#: models.py:284
+msgid "Default Shipping Address"
+msgstr "Förvald leveransadress"
+
+#: models.py:286
+msgid "Default Billing Address"
+msgstr "Förvald fakturaadress:"
+
+#: models.py:317
+msgid "Address Book"
+msgstr "Adressbok"
+
+#: models.py:318
+msgid "Address Books"
+msgstr "Adressböcker"
+
+#: supplier/models.py:16 supplier/models.py:33
+msgid "Supplier"
+msgstr "Leverantör"
+
+#: supplier/models.py:17
+msgid "Supplier ID"
+msgstr "Leverantörens ID"
+
+#: supplier/models.py:19
+msgid "Unit Cost"
+msgstr "Styckpris"
+
+#: supplier/models.py:20
+msgid "Inventory"
+msgstr "I lager"
+
+#: supplier/models.py:26
+msgid "Raw Item"
+msgstr "Råvara"
+
+#: supplier/models.py:27
+msgid "Raw Items"
+msgstr "Råvaror"
+
+#: supplier/models.py:34
+msgid "Date Created"
+msgstr "Skapad datum"
+
+#: supplier/models.py:35
+msgid "Subtotal"
+msgstr "Delsumma"
+
+#: supplier/models.py:36
+msgid "Shipping"
+msgstr "Frakt"
+
+#: supplier/models.py:37
+msgid "Tax"
+msgstr "Moms"
+
+#: supplier/models.py:39
+msgid "Total"
+msgstr "Totalt"
+
+#: supplier/models.py:55
+msgid "Supplier Order"
+msgstr "Leverantörsbeställning"
+
+#: supplier/models.py:56
+msgid "Supplier Orders"
+msgstr "Leverantörsbeställningar"
+
+#: supplier/models.py:63
+msgid "Line Item"
+msgstr "Orderrad"
+
+#: supplier/models.py:64
+msgid "Line Item Quantity"
+msgstr "Orderrad antal"
+
+#: supplier/models.py:65
+msgid "Line Item Total"
+msgstr "Orderrad totalsumma"
+
+#: supplier/models.py:71
+msgid "Sent in"
+msgstr "Insänd"
+
+#: supplier/models.py:72
+msgid "Shipped"
+msgstr "Skickad"
+
+#: supplier/models.py:73
+msgid "Received"
+msgstr "Mottagen"
+
+#: supplier/models.py:82
+msgid "Status"
+msgstr "Status"
+
+#: supplier/models.py:84
+msgid "Date"
+msgstr "Datum"
+
+#: supplier/models.py:90
+msgid "Supplier Order Status"
+msgstr "Leverantörsbeställning status"
+
+#: supplier/models.py:91
+msgid "Supplier Order Statuses"
+msgstr "Leverantörsbeställning status"
+
+#: templates/contact/_addressblock.html:11
+msgid "Not set"
+msgstr "Inte inställt"
+
+#: templates/contact/login_signup.html:13
+#: templates/contact/login_signup_address.html:40
+msgid "Login, or sign up to the store"
+msgstr ""
+
+#: templates/contact/login_signup.html:21
+#: templates/contact/login_signup_address.html:48
+msgid "Existing members login"
+msgstr ""
+
+#: templates/contact/login_signup.html:32
+#: templates/contact/login_signup_address.html:61
+#, fuzzy
+msgid "Email Address:"
+msgstr "E-postadress"
+
+#: templates/contact/login_signup.html:41
+#: templates/contact/login_signup_address.html:69
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: templates/contact/login_signup.html:50
+#: templates/contact/login_signup_address.html:77
+#: templates/registration/login.html:23
+msgid "Login"
+msgstr "Logga in"
+
+#: templates/contact/login_signup.html:63
+#: templates/contact/login_signup_address.html:90
+msgid "New Members, Create Your Account Below"
+msgstr ""
+
+#: templates/contact/login_signup.html:69
+#: templates/contact/login_signup_address.html:96
+#, fuzzy
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Var god rätta till felet nedan."
+msgstr[1] ""
+
+#: templates/contact/login_signup.html:87
+#: templates/contact/login_signup_address.html:118
+msgid "Sign me up for Email Updates about new products and special offers!"
+msgstr ""
+
+#: templates/contact/login_signup.html:93
+#: templates/contact/login_signup_address.html:193
+#, fuzzy
+msgid "Create"
+msgstr "Skapad datum"
+
+#: templates/contact/login_signup_address.html:114
+#: templates/contact/update_form.html:69
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+#: templates/contact/login_signup_address.html:126
+#: templates/contact/update_form.html:79
+msgid "Billing Information"
+msgstr "Fakturainformation"
+
+#: templates/contact/login_signup_address.html:128
+#: templates/contact/update_form.html:81
+#, fuzzy
+msgid "Bill To"
+msgstr "Fakturerad"
+
+#: templates/contact/login_signup_address.html:128
+#: templates/contact/login_signup_address.html:162
+#: templates/contact/update_form.html:81
+#: templates/contact/update_form.html:115
+msgid "If different from the first and last names above"
+msgstr ""
+
+#: templates/contact/login_signup_address.html:149
+#: templates/contact/login_signup_address.html:183
+#: templates/contact/update_form.html:102
+#: templates/contact/update_form.html:136
+msgid "Zipcode/Postcode"
+msgstr "Postnummer"
+
+#: templates/contact/login_signup_address.html:157
+#: templates/contact/update_form.html:110
+msgid "Shipping Address"
+msgstr "Leveransadress"
+
+#: templates/contact/login_signup_address.html:162
+#: templates/contact/update_form.html:115
+#, fuzzy
+msgid "Ship To"
+msgstr "Leverans till"
+
+#: templates/contact/update_form.html:6 templates/contact/view_profile.html:7
+#: templates/registration/password_change_done.html:6
+#: templates/registration/password_change_form.html:6
+msgid "Account"
+msgstr "Konto"
+
+#: templates/contact/update_form.html:7
+msgid "Update Profile"
+msgstr "Uppdatera profil"
+
+#: templates/contact/update_form.html:42
+msgid "Your Profile"
+msgstr "Din profil"
+
+#: templates/contact/update_form.html:44
+#, fuzzy
+msgid "Please correct the following error:"
+msgstr "Var god rätta till felet nedan."
+
+#: templates/contact/update_form.html:50
+msgid "You&apos;ll need to fill out at least the fields with a *"
+msgstr "Du behöver fylla i åtminstone fälten markerade med *"
+
+#: templates/contact/update_form.html:52
+msgid "Basic Information"
+msgstr "Allmän information"
+
+#: templates/contact/update_form.html:53 templates/registration/login.html:17
+msgid "Email address"
+msgstr "E-postadress"
+
+#: templates/contact/update_form.html:66
+msgid "Birthday"
+msgstr "Födelsedag"
+
+#: templates/contact/update_form.html:145
+msgid "Update"
+msgstr "Uppdatera"
+
+#: templates/contact/view_profile.html:11
+#: templates/registration/account_info.html:9
+msgid "Your Account info"
+msgstr "Din kontoinformation"
+
+#: templates/contact/view_profile.html:14
+#: templates/registration/account_info.html:11
+#, python-format
+msgid "Welcome, %(full_name)s."
+msgstr "Välkommen, %(full_name)s."
+
+#: templates/contact/view_profile.html:17
+msgid "Your profile"
+msgstr "Din profil"
+
+#: templates/contact/view_profile.html:19
+msgid "Email:"
+msgstr "E-post:"
+
+#: templates/contact/view_profile.html:21
+#, fuzzy
+msgid "Organization:"
+msgstr "Organisation"
+
+#: templates/contact/view_profile.html:23
+msgid "Birthday:"
+msgstr "Födelsedag:"
+
+#: templates/contact/view_profile.html:25
+msgid "Newsletter:"
+msgstr "Nyhetsbrev:"
+
+#: templates/contact/view_profile.html:25
+msgid "Yes"
+msgstr "Ja"
+
+#: templates/contact/view_profile.html:25
+msgid "No"
+msgstr "Nej"
+
+#: templates/contact/view_profile.html:27
+msgid "Billing Address:"
+msgstr "Faktura-adress:"
+
+#: templates/contact/view_profile.html:28
+msgid "Shipping Address:"
+msgstr "Leveransadress:"
+
+#: templates/contact/view_profile.html:30
+#: templates/contact/view_profile.html:43
+#: templates/registration/account_info.html:13
+msgid "Account options"
+msgstr "Kontoalternativ"
+
+#: templates/contact/view_profile.html:32
+msgid "Update your profile"
+msgstr "Uppdatera din profil"
+
+#: templates/contact/view_profile.html:34
+#: templates/contact/view_profile.html:47
+#: templates/registration/account_info.html:15
+#: templates/registration/password_change_form.html:11
+msgid "Change your password"
+msgstr "Byt lösenord"
+
+#: templates/contact/view_profile.html:36
+msgid "Order History"
+msgstr "Orderhistorik"
+
+#: templates/contact/view_profile.html:41
+msgid ""
+"Sorry, the user you've logged in as doesn't have any contact information."
+msgstr "Tyvärr, användaren som du loggat in som har ingen kontaktinformation."
+
+#: templates/contact/view_profile.html:41
+msgid "Probably because you are an admin."
+msgstr "Antagligen för att du är administratör."
+
+#: templates/contact/view_profile.html:45
+msgid "Set up contact information"
+msgstr "Ställ in kontaktinformation"
+
+#: templates/registration/activate.html:7
+msgid "Registration Complete"
+msgstr "Registrering Klar"
+
+#: templates/registration/activate.html:12
+#: templates/registration/repeat_activation.html:11
+msgid "Account Activation"
+msgstr "Kontoaktivering"
+
+#: templates/registration/activate.html:16
+msgid "Thanks for signing up! You are now logged in."
+msgstr "Tack för att du registrerade dig! Du är nu inloggad."
+
+#: templates/registration/activate.html:17
+#, python-format
+msgid "In the future, you can log in using your email address (%(email)s)."
+msgstr ""
+"I framtiden kan du logga in genom att använda din e-postadress (%(email)s)."
+
+#: templates/registration/activate.html:21
+#, python-format
+msgid ""
+"Either your activation link was incorrect, or the activation key for your "
+"account has expired. Activation keys are only valid for %(expiration_days)s "
+"days after registration."
+msgstr ""
+"Antingen var din aktiveringslänk felaktig eller har aktiveringsnyckeln för "
+"ditt konto gått ut. Aktiveringsnycklar är endast giltiga %(expiration_days)s "
+"dagar efter registrering."
+
+#: templates/registration/activation_email.txt:1
+#, python-format
+msgid ""
+"Someone, hopefully you, signed up for a new account at %(site)s using this "
+"email address. If it was you, and you'd like to activate and use your "
+"account, click the link below or copy and paste it into your web browser's "
+"address bar."
+msgstr ""
+"Någon, förhoppningsvis du, registrerade ett nytt konto på %(site)s med den "
+"här e-postadressen. Om det var du, och du skulle vilja aktivera och använda "
+"ditt konto, klicka då på länken nedan eller kopiera och klistra in den i din "
+"webbläsares adressfält."
+
+#: templates/registration/activation_email.txt:5
+#, python-format
+msgid ""
+"If you didn't request this, you don't need to do anything; you won't receive "
+"any more email from us, and the account will expire automatically in %"
+"(expiration_days)s days."
+msgstr ""
+"Om du ett efterfrågade detta behöver du inte göra någonting; du kommer inte "
+"att få fler e-brev från oss, och kontot kommer automatiskt att utgå om %"
+"(expiration_days)s dagar."
+
+#: templates/registration/login.html:19
+msgid "Password"
+msgstr "Lösenord"
+
+#: templates/registration/login.html:32
+msgid "If you do not have an account, please"
+msgstr "Om du inte har ett konto, "
+
+#: templates/registration/login.html:32
+msgid "click here"
+msgstr "klicka här"
+
+#: templates/registration/login.html:33
+msgid "If you do not remember your password, please"
+msgstr "Om du inte kommer ihåg ditt lösenord, "
+
+#: templates/registration/login.html:33
+msgid "click here</a> to have it reset."
+msgstr "klicka här</a> för att återställa det."
+
+#: templates/registration/logout.html:9
+msgid "You have been successfully logged out."
+msgstr "Du har nu loggat ut."
+
+#: templates/registration/password_change_done.html:7
+msgid "Password Change Done"
+msgstr "Ändring av lösenord genomförd"
+
+#: templates/registration/password_change_done.html:12
+msgid "Password change successful"
+msgstr "Ändring av lösenord slutförd utan problem."
+
+#: templates/registration/password_change_done.html:14
+msgid "Your password change has been completed."
+msgstr "Ditt lösenordsbyte är nu slutfört."
+
+#: templates/registration/password_change_form.html:7
+msgid "Password Change"
+msgstr "Byte av lösenord"
+
+#: templates/registration/password_change_form.html:12
+msgid ""
+"For the sake of security, please enter your old password, and then enter "
+"your new password twice."
+msgstr ""
+"Av säkerhetsskäl, var god ange ditt gamla lösenord och ange sedan det nya "
+"lösenordet två gånger."
+
+#: templates/registration/password_change_form.html:19
+msgid "Old password"
+msgstr "Gammalt lösenord"
+
+#: templates/registration/password_change_form.html:26
+msgid "New password"
+msgstr "Nytt lösenord"
+
+#: templates/registration/password_change_form.html:33
+msgid "Confirm new password"
+msgstr "Bekräfta nytt lösenord"
+
+#: templates/registration/password_change_form.html:36
+msgid "Change password"
+msgstr "Byt lösenord"
+
+#: templates/registration/password_reset.txt:2
+#, fuzzy
+msgid "You're receiving this e-mail because you requested a password reset"
+msgstr ""
+"Du får det här e-postbrevet eftersom du begärde ett lösenordsbyte för ditt "
+"användarkonto på %(site_name)s"
+
+#: templates/registration/password_reset.txt:3
+#, python-format
+msgid "for your user account at %(site_name)s"
+msgstr ""
+
+#: templates/registration/password_reset.txt:5
+#, fuzzy
+msgid "Please go to the following page and choose a new password:"
+msgstr "Var god rätta till felet nedan."
+
+#: templates/registration/password_reset.txt:9
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: templates/registration/password_reset.txt:11
+msgid "Thanks for using our site!"
+msgstr "Tack för att du använder vår sajt."
+
+#: templates/registration/password_reset.txt:13
+#, fuzzy, python-format
+msgid "The %(site_name)s team"
+msgstr "%(site_name)s-teamet"
+
+#: templates/registration/password_reset_done.html:10
+msgid "Password reset successful"
+msgstr "Lösenordet återställt"
+
+#: templates/registration/password_reset_done.html:12
+msgid ""
+"We've e-mailed a new password to the e-mail address you submitted. You "
+"should receive it shortly."
+msgstr ""
+"Vi har skickat ett e-brev med ett nytt lösenord till e-postadressen du "
+"angav. Du bör få det inom kort."
+
+#: templates/registration/password_reset_form.html:10
+msgid "Reset your password"
+msgstr "Återställ ditt lösenord"
+
+#: templates/registration/password_reset_form.html:12
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send a "
+"new password to you."
+msgstr ""
+"Glömt ditt lösenord? Ange din e-postadress här nedan så skickar vi ett nytt "
+"lösenord till dig."
+
+#: templates/registration/password_reset_form.html:19
+msgid "E-mail address"
+msgstr "E-postadress"
+
+#: templates/registration/password_reset_form.html:20
+msgid "Be sure to enter the same e-mail address you used to register."
+msgstr "Ange samma e-postadress som du använde för att registrera dig."
+
+#: templates/registration/password_reset_form.html:21
+msgid "Reset password"
+msgstr "Återställ lösenord"
+
+#: templates/registration/registration_complete.html:7
+#: templates/registration/registration_complete.html:11
+msgid "Account Creation"
+msgstr "Konto skapat"
+
+#: templates/registration/registration_complete.html:12
+msgid "Thank you for signing up."
+msgstr "Tack för att du registrerade dig."
+
+#: templates/registration/registration_complete.html:14
+msgid ""
+"An activation link has been sent to the email address you supplied, along "
+"with instructions for activating your account."
+msgstr ""
+"En aktiveringslänk har skickats till e-postadressen du angav, ihop med "
+"instruktioner om hur du aktiverar ditt konto."
+
+#: templates/registration/registration_form.html:6
+msgid "Registration"
+msgstr "Registrering"
+
+#: templates/registration/registration_form.html:10
+msgid "Please Enter Your Account Information"
+msgstr "Var god ange din kontoinformation"
+
+#: templates/registration/registration_form.html:38
+msgid "Create Account"
+msgstr "Skapa konto"
+
+#: templates/registration/repeat_activation.html:6
+msgid "Repeat Activation"
+msgstr "Upprepad aktivering"
+
+#: templates/registration/repeat_activation.html:13
+msgid "This account has already been activated. Please login."
+msgstr "Detta konto har redan aktiverats. Var god logga in."
+
+#: templates/registration/welcome.txt:1
+#, python-format
+msgid "Dear %(first_name)s %(last_name)s,"
+msgstr "Hej %(first_name)s %(last_name)s,"
+
+#: templates/registration/welcome.txt:3
+#, python-format
+msgid "Thank you for signing up with %(company_name)s."
+msgstr "Tack för att du registrerade dig hos %(company_name)s."
+
+#: templates/registration/welcome.txt:5
+msgid "Your new username is this email address, and you can login at"
+msgstr "Ditt nya användarnamn är denna e-postadress, och du kan logga in på"
+
+#: templates/registration/welcome.txt:7
+msgid "Regards"
+msgstr "Vänliga hälsningar"
+
+#: templates/registration/welcome.txt:9
+msgid "Store Management"
+msgstr "Butikshantering"
+
+#~ msgid "Customer"
+#~ msgstr "Kund"
+
+#~ msgid "Distributor"
+#~ msgstr "Återförsäljare"
+
+#~ msgid "Company"
+#~ msgstr "Företag"
+
+#~ msgid "Government"
+#~ msgstr "Offentlig / Statlig"
+
+#~ msgid "Non-profit"
+#~ msgstr "Ickekommersiell"
+
+#~ msgid "Manufacturer"
+#~ msgstr "Tillverkare"
+
+#~ msgid "In Person"
+#~ msgstr "Personligt möte"
+
+#~ msgid "Online"
+#~ msgstr "Online"
+
+#~ msgid "Show"
+#~ msgstr "Visa"
+
+#~ msgid "Temp"
+#~ msgstr "Temporär"
+
+#~ msgid "Pending"
+#~ msgstr "Väntar på behandling"
+
+#~ msgid "In Process"
+#~ msgstr "Behandlas"
+
+#~ msgid "Discount Code"
+#~ msgstr "Rabattkod"
+
+#~ msgid "Coupon Code"
+#~ msgstr "Rabattkod"
+
+#~ msgid "Discount amount"
+#~ msgstr "Prisnedsättning"
+
+#~ msgid "Order method"
+#~ msgstr "Ordersätt"
+
+#~ msgid "Shipping Description"
+#~ msgstr "Fraktbeskrivning"
+
+#~ msgid "Shipping Method"
+#~ msgstr "Fraktsätt"
+
+#~ msgid "Shipping Models"
+#~ msgstr "Fraktmoduler"
+
+#~ msgid "Shipping Cost"
+#~ msgstr "Fraktkostnad"
+
+#~ msgid "Shipping Discount"
+#~ msgstr "Prisnedsättning på frakten"
+
+#~ msgid "Timestamp"
+#~ msgstr "Tidsmärke"
+
+#~ msgid "This is set automatically."
+#~ msgstr "Denna sätts automatiskt."
+
+#~ msgid "Billing Address"
+#~ msgstr "Fakturaadress"
+
+#~ msgid "Totals"
+#~ msgstr "Totalsumma"
+
+#~ msgid "Product Order"
+#~ msgstr "Produktorder"
+
+#~ msgid "Product Orders"
+#~ msgstr "Produktordrar"
+
+#~ msgid "Order"
+#~ msgstr "Order"
+
+#~ msgid "Product"
+#~ msgstr "Produkt"
+
+#~ msgid "Quantity"
+#~ msgstr "Antal"
+
+#~ msgid "Unit price"
+#~ msgstr "Pris per styck"
+
+#~ msgid "Unit tax"
+#~ msgstr "Moms per styck"
+
+#~ msgid "Line item price"
+#~ msgstr "Orderradspris"
+
+#~ msgid "Line item tax"
+#~ msgstr "Orderrad moms"
+
+#~ msgid "Subscription End"
+#~ msgstr "Prenumerationen går ut"
+
+#~ msgid "Subscription expiration date."
+#~ msgstr "Utgångsdatum för prenumeration."
+
+#~ msgid "Completed"
+#~ msgstr "Slutförd"
+
+#~ msgid "Line item discount"
+#~ msgstr "Prisnedsättning på orderrad"
+
+#~ msgid "Order Line Item"
+#~ msgstr "Orderrad"
+
+#~ msgid "Order Line Items"
+#~ msgstr "Orderrader"
+
+#~ msgid "Order Item"
+#~ msgstr "Ordervara"
+
+#~ msgid "Value"
+#~ msgstr "Värde"
+
+#~ msgid "Price Change"
+#~ msgstr "Prisförändring"
+
+#~ msgid "Sort Order"
+#~ msgstr "Sorteringsordning"
+
+#~ msgid "The display order for this group."
+#~ msgstr "Visningsordningen för denna grupp."
+
+#~ msgid "Order Item Detail"
+#~ msgstr "Ordervarudetalj"
+
+#~ msgid "Order Item Details"
+#~ msgstr "Ordervarudetaljer"
+
+#~ msgid "Downloadable product"
+#~ msgstr "Nedladdningsbar produkt"
+
+#~ msgid "Number of attempts"
+#~ msgstr "Antal nedladdningsförsök"
+
+#~ msgid "Time stamp"
+#~ msgstr "Tidsmärke"
+
+#~ msgid "Active"
+#~ msgstr "Aktiverad"
+
+#~ msgid "This download is no longer active"
+#~ msgstr "Denna länk är inte längre aktiv"
+
+#~ msgid "You have exceeded the number of allowed downloads."
+#~ msgstr "Du har redan nått det tillåtna antalet nedladdningar."
+
+#~ msgid "This download link has expired."
+#~ msgstr "Denna nedladdningslänk har gått ut."
+
+#~ msgid "Download Link"
+#~ msgstr "Nedladdningslänk"
+
+#~ msgid "Download Links"
+#~ msgstr "Nedladdningslänkar"
+
+#~ msgid "Order Status"
+#~ msgstr "Orderstatus"
+
+#~ msgid "Order Statuses"
+#~ msgstr "Orderstatus"
+
+#~ msgid "Payment Method"
+#~ msgstr "Betalningssätt"
+
+#~ msgid "amount"
+#~ msgstr "belopp"
+
+#~ msgid "timestamp"
+#~ msgstr "tidsmärke"
+
+#~ msgid "Transaction ID"
+#~ msgstr "Transaktions-ID"
+
+#~ msgid "Order Payment"
+#~ msgstr "Orderbetalning"
+
+#~ msgid "Order Payments"
+#~ msgstr "Orderbetalningar"
+
+#~ msgid "key"
+#~ msgstr "nyckel"
+
+#~ msgid "value"
+#~ msgstr "värde"
+
+#~ msgid "Order variable"
+#~ msgstr "Ordervariabel"
+
+#~ msgid "Order variables"
+#~ msgstr "Ordervariabler"
+
+#~ msgid "Order tax detail"
+#~ msgstr "Ordermomsdetalj"
+
+#~ msgid "Order tax details"
+#~ msgstr "Ordermomsdetaljer"
+
+#~ msgid ""
+#~ "The order you have requested doesn't exist, or you don't have access to "
+#~ "it."
+#~ msgstr ""
+#~ "Beställningen du efterfrågade finns inte, eller saknar du tillgång till "
+#~ "den."
+
+#~ msgid "Discount"
+#~ msgstr "Prisnedsättning"
+
+#~ msgid "Items Ordered"
+#~ msgstr "Beställda varor"
+
+#~ msgid "Username:"
+#~ msgstr "Användarnamn:"
+
+#~ msgid "Forgotten your password?"
+#~ msgstr "Glömt ditt lösenord?"
+
+#~ msgid "Post a photo"
+#~ msgstr "Skicka ett foto"
+
+#~ msgid "Required"
+#~ msgstr "Obligatoriskt"
+
+#~ msgid "Optional"
+#~ msgstr "Frivilligt"
+
+#~ msgid "Review:"
+#~ msgstr "Recension:"
+
+#~ msgid "Send review"
+#~ msgstr "Skicka recension"
+
+#~ msgid "Base Shipping"
+#~ msgstr "Grundkostnad för frakt"
+
+#~ msgid "Shipping (incl. Tax)"
+#~ msgstr "Frakt (inkl. moms)"
+
+#~ msgid "Tax included"
+#~ msgstr "Inklusive moms"
+
+#~ msgid "Order #"
+#~ msgstr "Order #"
+
+#~ msgid "Your email address and password didn't match. Please try again."
+#~ msgstr ""
+#~ "Din e-postadress och ditt lösenord stämde inte överens. Var god försök "
+#~ "igen."
+
+#~ msgid "Your new password is"
+#~ msgstr "Ditt nya lösenord är"
+
+#~ msgid "Feel free to change this password by going to this page"
+#~ msgstr "Om du vill kan du byta lösenord genom att gå till den här sidan"
+
+#~ msgid ""
+#~ "You can log in using your email address (%(email)s) or your username (%"
+#~ "(username)s)."
+#~ msgstr ""
+#~ "Du kan logga in med din e-postadress (%(email)s) eller ditt användarnamn "
+#~ "(%(username)s)."

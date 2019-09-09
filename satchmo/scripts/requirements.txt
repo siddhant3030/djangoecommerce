@@ -1,0 +1,13 @@
+pillow
+django>=1.8
+pycrypto
+trml2pdf
+PyYAML
+reportlab
+sorl-thumbnail
+django-registration-redux
+django-contrib-comments
+hg+https://bitbucket.org/predatell/django-livesettings/
+hg+https://bitbucket.org/predatell/django-threaded-multihost/
+hg+https://bitbucket.org/predatell/django-caching-app-plugins/
+hg+https://bitbucket.org/predatell/django-keyedcache/

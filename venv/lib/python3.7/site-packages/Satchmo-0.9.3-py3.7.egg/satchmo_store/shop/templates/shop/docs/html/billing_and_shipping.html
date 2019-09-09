@@ -1,0 +1,58 @@
+{% load i18n %}
+<div id="billing" class="billing-and-shipping">
+  <h3>{% trans "Billed to" %}</h3>
+  {% if order.bill_addressee %}
+  <p>{{order.bill_addressee}}</p>
+  {% endif %}
+  {% if order.bill_street1 %}
+  <p>{{order.bill_street1}}</p>
+  {% endif %}
+  {% if order.bill_street1 %}
+  <p>{{order.bill_street2}}</p>
+  {% endif %}
+  <p>
+    {% if order.bill_city %}{{order.bill_city}}{% endif %}{% if order.bill_state or order.bill_postal_code %},{% endif %}
+    {% if order.bill_postal_code %}{{order.bill_postal_code}}{% endif %}
+    {% if order.bill_state %}{{order.bill_state}}{% endif %}
+  </p>
+  {% if order.bill_country %}
+  <p>
+    {{order.bill_country}}
+  </p>
+  {% endif %}
+  {% if order.contact.primary_phone.phone or order.contact.email %}
+  <dl>
+    {% if order.contact.primary_phone.phone %}
+    <dt>{% trans "Phone" %}:</dt>
+    <dd>{{order.contact.primary_phone.phone}}</dd>
+    {% endif %}
+    {% if order.contact.email %}
+    <dt>{% trans "Email" %}:</dt>
+    <dd>{{order.contact.email}}</dd>
+    {% endif %}
+  </dl>
+  {% endif %}
+</div>
+<div id="shipping" class="billing-and-shipping">
+  <h3>{% trans "Shipped to" %}</h3>
+  {% if order.ship_addressee %}
+  <p>{{order.ship_addressee}}</p>
+  {% endif %}
+  {% if order.ship_street1 %}
+  <p>{{order.ship_street1}}</p>
+  {% endif %}
+  {% if order.ship_street1 %}
+  <p>{{order.ship_street2}}</p>
+  {% endif %}
+  <p>
+    {% if order.ship_city %}{{order.ship_city}}{% endif %}{% if order.ship_state or order.ship_postal_code %},{% endif %}
+    {% if order.ship_postal_code %}{{order.ship_postal_code}}{% endif %}
+    {% if order.ship_state %}{{order.ship_state}}{% endif %}
+  </p>
+  {% if order.ship_country %}
+  <p>
+    {{order.ship_country}}
+  </p>
+  {% endif %}
+</div>
+

@@ -1,0 +1,3 @@
+{% load i18n %}
+{% url 'satchmo_product_best_rated' as besturl %}
+{% if besturl %}<br/><a href="{{ besturl }}">{% trans "Most Popular" %}</a><br/>{% endif %}

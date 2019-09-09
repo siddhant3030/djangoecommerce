@@ -1,0 +1,106 @@
+==================
+Welcome to Satchmo
+==================
+
+`Satchmo`_ is an eCommerce framework created in Django
+which allows you to develop unique and robust online stores.
+
+.. _Satchmo: http://satchmoproject.com/
+
+Overview
+========
+
+.. toctree::
+   :maxdepth: 1
+
+   introduction
+   about
+   features
+   requirements
+   directory_structure
+
+Installation
+============
+
+.. toctree::
+   :maxdepth: 1
+
+   quickstart
+   new_installation
+   settings
+   configuration
+
+Store Usage
+===========
+
+.. toctree::
+   :maxdepth: 1
+
+   product
+   discounts
+   pricing
+   tax
+   shipping
+   analytics
+   payment
+   email-verification
+
+
+Modifying A Store
+=================
+
+.. toctree::
+   :maxdepth: 1
+
+   customization
+   custom-admin
+   custom-payment
+   product-attributes
+   custom-product
+   translation
+   templates
+   template-filters-tags
+   views
+   signals
+
+Optional Modules
+================
+
+.. toctree::
+   :maxdepth: 1
+
+   google-base
+   upsell
+
+Tutorials
+=========
+.. toctree::
+   :maxdepth: 1
+
+   tutorial1
+
+Deploying A Store
+=================
+
+.. toctree::
+   :maxdepth: 1
+
+   deploying
+   managing
+
+Additional Notes
+================
+.. toctree::
+   :maxdepth: 1
+
+   release-notes-0-9-3
+   release-notes-0-9-2
+   release-notes-0-9-1
+   release-notes-0-9
+   release-notes-0-8-1
+   release-notes-0-8
+   release-notes-0-7
+   migration
+
+
+

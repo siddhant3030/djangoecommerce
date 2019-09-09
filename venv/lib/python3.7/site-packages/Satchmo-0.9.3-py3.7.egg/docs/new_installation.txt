@@ -1,0 +1,227 @@
+============
+Installation
+============
+
+This guide is the Satchmo installation process. It is meant to be a cookbook approach for
+most users. Advanced users may wish to modify this in order to integrate into their own projects. For the
+truly impatient, you may look at the :doc:`Quick Start <quickstart>` for the fastest way to get a store up and
+running.
+
+This guide assumes you are working on a unix variant and that you are installing it somewhere into a directory
+you have write access to. In the below example, we use :file:`/home/user/src`. You are expected to modify the path to fit your needs.
+
+.. warning::
+   You must have Django 1.4.x properly installed. Satchmo is not compatible with Django 1.5 at this time.
+
+A Quick Note About Installing Dependencies
+------------------------------------------
+
+Python allows you to install applications in multiple ways: you can use the
+commands :command:`easy_install` or :command:`pip`; you may also manually
+install them by:
+
+  - linking the packages into your site-packages directory, or
+  - use .pth files to add each to your python path.
+
+All of these will work fine with Satchmo, but in the interest of keeping this as
+straightforward as possible, we show how to install the packages with either:
+
+  - :command:`pip`, or
+  - :command:`python setup.py install` on a source code checkout (with mercurial)
+
+.. note::
+    The provided egg and tar files by the various dependencies may not be the
+    most current installation, so you should ensure that the version recommended
+    by satchmo (see :doc:`requirements`) is available via `easy_install` before proceeding.
+
+Installing Dependencies
+-----------------------
+
+#. Install setuputils by following the instructions on the easy_install_ page.
+   After installation, you should be able to run :command:`easy_install`
+   directly (assuming the install directory is in you $PATH).
+
+#. Install required dependencies (this may vary based on your OS of choice)::
+
+        pip install pycrypto
+        pip install pyyaml
+        pip install pillow
+
+#. Install django-threaded-multihost::
+
+        pip install django-threaded-multihost
+
+#. Install django-app-plugins::
+
+        pip install django-app-plugins
+
+#. Install django-caching-app-plugins::
+
+        pip install django-caching-app-plugins
+
+#. Install sorl-thumbnail::
+
+        pip install sorl-thumbnail
+
+#. Install livesettings::
+
+        pip install django-livesettings
+
+#. Install keyedcache::
+
+        pip install django-keyedcache
+
+   .. versionadded:: 0.9.1
+
+#. Satchmo has two types of documentation: Sphinx and docutils. Sphinx is used
+   to generate this document, while docutils are useful for the auto-generated
+   admin documentation.
+
+   You may choose to install these dependencies by running::
+
+        pip install sphinx
+        pip install docutils
+
+#. Satchmo also uses South for database migrations. You may also install it::
+
+        pip install South
+
+   .. seealso::
+
+      :doc:`migration` for more information on how migrations in Satchmo
+      should be applied.
+
+   .. versionadded:: 0.9.1
+
+#. If you use the Fedex shipping module, you will need to install 2 additional modules::
+
+        pip install fedex
+        pip install suds
+
+#. Install django-registration::
+
+        pip install django-registration
+
+
+Installing Satchmo into your path
+---------------------------------
+
+1. Checkout the latest Satchmo release into :file:`/home/user/src`::
+
+        hg clone http://bitbucket.org/chris1610/satchmo/
+
+   .. note::
+      If you are a bitbucket user, you may see a slightly different url than described above.
+      You may use the generic url or one that is specific to your username. For the purposes
+      of an install, either will work.
+
+2. Install satchmo onto your system::
+
+        cd /home/user/src/satchmo
+        sudo python setup.py install
+
+   .. note::
+      An alternative to running the install is ensuring that :file:`/path/to/satchmo/apps` is on your python path.
+      You may do this by placing a symbolic link to the source, adding a .pth file that points to your :file:`/satchmo/apps`
+      location or modifying your PYTHONPATH environment variable.
+
+.. highlight:: pycon
+
+3. Once the above step is completed, you should be able to import both django and satchmo::
+
+        $ python
+        Python 2.5.2 (r252:60911, Mar 12 2008, 13:39:09)
+        [GCC 4.2.3 (Ubuntu 4.2.3-2ubuntu4)] on linux2
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>> import django
+        >>> import satchmo_store
+        >>> satchmo_store.get_version()
+        '0.9-pre hg-YYYY:ZZZZZZZZZZ'
+
+.. highlight:: python
+
+.. warning::
+   Do not attempt to progress any further on the install until the above imports work.
+
+.. _clonesatchmo:
+
+Build Your Store With clonesatchmo
+----------------------------------
+
+In order to quickly get you up and running, satchmo includes a helper script that will
+get a new sample store up and running quickly.
+
+1. Build a starter store using :command:`clonesatchmo`::
+
+    python /home/user/src/satchmo/scripts/clonesatchmo.py
+
+The clonesatchmo program will do everything described in :doc:`settings`. At a high level it:
+
+    * Creates a directory for your store (defaults to simplestore)
+    * Also creates a localsite directory for your customizations (defaults to localsite)
+    * Copies a valid settings.py and local_settings.py file
+    * Copies your static directory in place
+    * Copies a valid urls.py file
+    * Synchs your database (using sqlite)
+    * Loads l10n data
+    * Loads a sample store
+
+Using this process is the recommended way to get your store up and running. Once you are comfortable with
+this store, you can dive into modifying your :doc:`settings` file or making other changes.
+
+View the Demo Store
+-------------------
+
+After you have completed your initial install, you can check out your demo store
+using the commands below.
+
+1.  Start up the sample webserver to see your store::
+
+        python manage.py runserver
+
+2.  In order to see your sample store, point your browser to::
+
+        http://127.0.0.1:8000/shop or http://127.0.0.1/
+
+3.  If you want to see the admin interface, point your browser to::
+
+        http://127.0.0.1:8000/admin
+
+4.  Many configuration and customization settings are accessed through the url::
+
+        http://127.0.0.1:8000/settings
+
+5.  Additional detailed documentation can be found here::
+
+        http://127.0.0.1:8000/admin/doc
+
+.. note::
+    The above urls will be dependent on your Django setup.  If you're running the webserver on the
+    same machine you're developing on, the above urls should work.  If not, use the appropriate url.
+
+Troubleshooting
+---------------
+
+If after following these steps, you have errors or can not get the store to work, satchmo includes a custom
+command to check your system's configuration. To check your system out::
+
+    python manage.py satchmo_check
+    Checking your satchmo configuration.
+    Your configuration has no errors.
+
+Additional Notes
+----------------
+
+Satchmo also includes a full set of unit tests. After you get your system installed, you can run the unit tests with this command::
+
+        python manage.py test
+
+Useful Links
+------------
+
+`Django installation guide`_
+
+.. _Django installation guide: http://www.djangoproject.com/documentation/install/
+.. _`Django Comment Utils`: http://code.google.com/p/django-comment-utils/
+.. _easy_install : http://peak.telecommunity.com/DevCenter/EasyInstall#installation-instructions
+.. _`Pillow`: http://pillow.readthedocs.org/en/latest/

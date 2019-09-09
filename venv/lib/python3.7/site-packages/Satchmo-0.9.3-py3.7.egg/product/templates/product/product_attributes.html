@@ -1,0 +1,9 @@
+{% with product.translated_attributes as atts %}
+  {% if atts %}
+    <p class="productattributes">
+      {% for att in atts %}
+        {{ att.description }}: {{ att.value }}<br/>
+      {% endfor %}
+    </p>
+  {% endif %}
+{% endwith %}

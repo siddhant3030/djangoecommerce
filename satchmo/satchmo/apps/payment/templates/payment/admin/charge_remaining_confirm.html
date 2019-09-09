@@ -1,0 +1,23 @@
+{% extends 'admin/base_site.html' %}
+{% load i18n %}
+{% block content %}
+<h1>{% trans 'Custom Charge' %}</h1>
+{% if form.errors %}
+    <p class="errornote">
+    {% blocktrans count form.errors|length as counter %}Please correct the error below.{% plural %}Please correct the errors below.{% endblocktrans %}
+    </p>
+{% endif %}
+<form name="chargeform" id="chargeform" method="POST" action="{% url 'satchmo_charge_remaining' %}">{% csrf_token %}
+{% for hidden in form.hidden_fields %}
+  {{ hidden }}
+{% endfor %}
+<p><label for="id_unit_price">{% trans 'New amount' %}</label> {{ form.unit_price }}</p>
+{% if form.unit_price.errors %}<p class="error">{{ form.unit_price.errors|join:", "}}</p>{% endif %}
+<p>{{ form.shipping.label_tag }} {{ form.shipping }}</p>
+{% if form.shipping.errors %}<p class="error">{{ form.shipping.errors|join:", "}}</p>{% endif %}
+<p>{{ form.notes.label_tag }} {{ form.notes }}</p>
+{% if form.notes.errors %}<p class="error">{{ form.notes.errors|join:", "}}</p>{% endif %}
+<p><input type="submit" value="Charge" /></p>
+</form>
+
+{% endblock %}

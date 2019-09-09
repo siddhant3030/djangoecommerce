@@ -1,0 +1,862 @@
+# Satchmo Translation Package
+# Copyright (C) 2008 Satchmo Project
+# This file is distributed under the same license as the Satchmo package.
+# 
+# Translators:
+# florindinu <contact@florindinu.ro>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Satchmo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-28 19:54-0600\n"
+"PO-Revision-Date: 2011-03-22 15:53+0000\n"
+"Last-Translator: florindinu <contact@florindinu.ro>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1))\n"
+
+#: config.py:9
+msgid "Only authenticated users can check out"
+msgstr "Doar utilizatorii autentificați pot trimite comenzi"
+
+#: config.py:10
+msgid ""
+"Users will be required to authenticate (and create an account if neccessary)"
+" before checkout."
+msgstr ""
+"Utilizatorii vor trebuii să se autentifice (sau să se înregistreze) înainte "
+"de a trimite comenzile."
+
+#: config.py:18
+msgid "Required billing data"
+msgstr "Informații de facturare obligatorii"
+
+#: config.py:20
+msgid ""
+"Users may be required to provide some set of billing address. Other fields "
+"are optional. You may shorten the checkout process here, but be careful, as "
+"this may leave you orders with almost no customer data! Some payment modules"
+" may override this setting."
+msgstr ""
+"Utilizatorii vor fi nevoiți să complecteze adresa de facturare. Alte câmpuri"
+" sunt opționale. Aici puteți scurta procesul de checkout, dar fiți atenți, "
+"comenzile vor conține informații puține."
+
+#: config.py:26 config.py:50 forms.py:25 models.py:144
+msgid "Email"
+msgstr "Email"
+
+#: config.py:27 forms.py:26 models.py:137
+msgid "Title"
+msgstr "Titlu"
+
+#: config.py:28 models.py:138 templates/contact/update_form.html:56
+msgid "First name"
+msgstr "Prenume"
+
+#: config.py:29 models.py:139 templates/contact/update_form.html:59
+msgid "Last name"
+msgstr "Nume"
+
+#: config.py:30 forms.py:29
+msgid "Phone"
+msgstr "Telefon"
+
+#: config.py:31 forms.py:30 forms.py:38 models.py:277
+msgid "Addressee"
+msgstr "Adresa"
+
+#: config.py:32 forms.py:31 models.py:93 models.py:142
+#: templates/contact/update_form.html:62
+msgid "Organization"
+msgstr "Organizația"
+
+#: config.py:33 forms.py:32 forms.py:39 models.py:278 models.py:279
+#: templates/contact/login_signup_address.html:131
+#: templates/contact/login_signup_address.html:134
+#: templates/contact/login_signup_address.html:165
+#: templates/contact/login_signup_address.html:168
+#: templates/contact/update_form.html:84 templates/contact/update_form.html:87
+#: templates/contact/update_form.html:118
+#: templates/contact/update_form.html:121
+msgid "Street"
+msgstr "Strada"
+
+#: config.py:34
+msgid "Street (second line)"
+msgstr "Strada (lina a doua)"
+
+#: config.py:35 forms.py:34 forms.py:41 models.py:281
+#: templates/contact/login_signup_address.html:137
+#: templates/contact/login_signup_address.html:171
+#: templates/contact/update_form.html:90
+#: templates/contact/update_form.html:124
+msgid "City"
+msgstr "Oraș"
+
+#: config.py:36 templates/contact/login_signup_address.html:142
+#: templates/contact/login_signup_address.html:145
+#: templates/contact/login_signup_address.html:176
+#: templates/contact/login_signup_address.html:179
+#: templates/contact/update_form.html:95 templates/contact/update_form.html:98
+#: templates/contact/update_form.html:129
+#: templates/contact/update_form.html:132
+msgid "State/Province"
+msgstr "Județ"
+
+#: config.py:37
+msgid "Postal code/ZIP"
+msgstr "Cod poștal"
+
+#: config.py:38 forms.py:76 forms.py:77 models.py:283
+#: templates/contact/login_signup_address.html:153
+#: templates/contact/login_signup_address.html:187
+#: templates/contact/update_form.html:106
+#: templates/contact/update_form.html:140
+msgid "Country"
+msgstr "Țara"
+
+#: config.py:46
+msgid "Account Verification"
+msgstr "Verificarea contului"
+
+#: config.py:47
+msgid ""
+"Select the style of account verification.  'Immediate' means no verification"
+" needed."
+msgstr ""
+"Selectați tipul de verificare a contului.  Tipul 'Imediat' nu verifică "
+"conturile."
+
+#: config.py:49
+msgid "Immediate"
+msgstr "Imediat"
+
+#: config.py:56
+msgid "Days to verify account"
+msgstr "Zile disponibile pentru verificarea  contului"
+
+#: forms.py:27
+msgid "First Name"
+msgstr "Prenume"
+
+#: forms.py:28
+msgid "Last Name"
+msgstr "Nume"
+
+#: forms.py:35 forms.py:42 forms.py:70 forms.py:71 models.py:280
+msgid "State"
+msgstr "Județ"
+
+#: forms.py:36 forms.py:43
+msgid "ZIP code/Postcode"
+msgstr "Cod poștal"
+
+#: forms.py:37 templates/contact/login_signup_address.html:159
+#: templates/contact/update_form.html:112
+msgid "Shipping same as billing?"
+msgstr "Adresa de livrare este aceeași cu cea de facturare?"
+
+#: forms.py:66
+msgid "---Please Select---"
+msgstr "--- Selectați o opțiune ---"
+
+#: forms.py:96 forms.py:147 forms.py:174 forms.py:187 forms.py:201
+msgid "This field is required."
+msgstr "Acest câmp este obligatoriu."
+
+#: forms.py:97
+msgid "State is required for your country."
+msgstr "Județul trebuie complectat obligatoriu."
+
+#: forms.py:102
+msgid "Invalid state or province."
+msgstr "Juteț invalid."
+
+#: forms.py:117
+msgid "That email address is already in use."
+msgstr "Acest email este deja înregistrat."
+
+#: forms.py:191
+msgid "Shipping and Billing countries must match"
+msgstr "Adresa de livrare și cea de facturare trebuie să fie în aceeași țară"
+
+#: forms.py:392 templates/contact/update_form.html:73
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: models.py:19 models.py:27 models.py:38 models.py:45
+msgid "Key"
+msgstr "Cheie"
+
+#: models.py:20 models.py:28 models.py:39 models.py:46 models.py:75
+msgid "Name"
+msgstr "Nume"
+
+#: models.py:34
+msgid "Contact organization type"
+msgstr "Tipul organizației de contact"
+
+#: models.py:76 models.py:225
+msgid "Type"
+msgstr "Tip"
+
+#: models.py:77 models.py:141
+msgid "Role"
+msgstr "Rol"
+
+#: models.py:78
+msgid "Creation Date"
+msgstr "Data creării"
+
+#: models.py:79 models.py:145 supplier/models.py:38 supplier/models.py:83
+msgid "Notes"
+msgstr "Note"
+
+#: models.py:94
+msgid "Organizations"
+msgstr "Organizaţii"
+
+#: models.py:143
+msgid "Date of birth"
+msgstr "Data nașterii"
+
+#: models.py:146
+msgid "Creation date"
+msgstr "Data creării"
+
+#: models.py:209 models.py:224
+msgid "Contact"
+msgstr "Contact"
+
+#: models.py:210
+msgid "Contacts"
+msgstr "Contacte"
+
+#: models.py:213
+msgid "Work"
+msgstr "Locul de muncă"
+
+#: models.py:214 templates/contact/login_signup.html:9
+#: templates/contact/update_form.html:5 templates/contact/view_profile.html:6
+#: templates/registration/account_info.html:5
+#: templates/registration/activate.html:6 templates/registration/login.html:5
+#: templates/registration/logout.html:5
+#: templates/registration/password_change_done.html:5
+#: templates/registration/password_change_form.html:5
+#: templates/registration/password_reset_done.html:5
+#: templates/registration/password_reset_form.html:5
+#: templates/registration/registration_complete.html:6
+#: templates/registration/registration_form.html:5
+#: templates/registration/repeat_activation.html:5
+msgid "Home"
+msgstr "Acasă"
+
+#: models.py:215
+msgid "Fax"
+msgstr "Fax"
+
+#: models.py:216
+msgid "Mobile"
+msgstr "Telefon mobil"
+
+#: models.py:226
+msgid "Date and Time"
+msgstr "Data și ora"
+
+#: models.py:227 models.py:241 models.py:275 supplier/models.py:18
+msgid "Description"
+msgstr "Descriere"
+
+#: models.py:233
+msgid "Interaction"
+msgstr "Interacțiune"
+
+#: models.py:234
+msgid "Interactions"
+msgstr "Interacțiuni"
+
+#: models.py:243 models.py:267
+msgid "Phone Number"
+msgstr "Număr de telefon"
+
+#: models.py:245
+msgid "Primary"
+msgstr "Primar"
+
+#: models.py:268
+msgid "Phone Numbers"
+msgstr "Numere de telefon"
+
+#: models.py:276
+msgid "Description of address - Home, Office, Warehouse, etc."
+msgstr "Descriere adresa - Acasă, la birou, spațiu depozitare, etc"
+
+#: models.py:282
+msgid "Zip Code"
+msgstr "Cod poștal"
+
+#: models.py:284
+msgid "Default Shipping Address"
+msgstr "Adresa de livrare implicită"
+
+#: models.py:286
+msgid "Default Billing Address"
+msgstr "Adresa de facturare implicită"
+
+#: models.py:317
+msgid "Address Book"
+msgstr "Agendă"
+
+#: models.py:318
+msgid "Address Books"
+msgstr "Agende"
+
+#: supplier/models.py:16 supplier/models.py:33
+msgid "Supplier"
+msgstr "Furnizor"
+
+#: supplier/models.py:17
+msgid "Supplier ID"
+msgstr "ID furnizor"
+
+#: supplier/models.py:19
+msgid "Unit Cost"
+msgstr "Preț per unitate"
+
+#: supplier/models.py:20
+msgid "Inventory"
+msgstr "Inventar"
+
+#: supplier/models.py:26
+msgid "Raw Item"
+msgstr ""
+
+#: supplier/models.py:27
+msgid "Raw Items"
+msgstr ""
+
+#: supplier/models.py:34
+msgid "Date Created"
+msgstr "Data creării"
+
+#: supplier/models.py:35
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#: supplier/models.py:36
+msgid "Shipping"
+msgstr "Livrare"
+
+#: supplier/models.py:37
+msgid "Tax"
+msgstr "Taxa"
+
+#: supplier/models.py:39
+msgid "Total"
+msgstr "Total"
+
+#: supplier/models.py:55
+msgid "Supplier Order"
+msgstr "Comandă furnizor"
+
+#: supplier/models.py:56
+msgid "Supplier Orders"
+msgstr "Comenzi furnizor"
+
+#: supplier/models.py:63
+msgid "Line Item"
+msgstr ""
+
+#: supplier/models.py:64
+msgid "Line Item Quantity"
+msgstr ""
+
+#: supplier/models.py:65
+msgid "Line Item Total"
+msgstr ""
+
+#: supplier/models.py:71
+msgid "Sent in"
+msgstr "Trimis"
+
+#: supplier/models.py:72
+msgid "Shipped"
+msgstr "Livrat"
+
+#: supplier/models.py:73
+msgid "Received"
+msgstr "Primit"
+
+#: supplier/models.py:82
+msgid "Status"
+msgstr "Status"
+
+#: supplier/models.py:84
+msgid "Date"
+msgstr "Data"
+
+#: supplier/models.py:90
+msgid "Supplier Order Status"
+msgstr "Status comandă furnizor"
+
+#: supplier/models.py:91
+msgid "Supplier Order Statuses"
+msgstr "Statusuri comenzi furnizor"
+
+#: templates/contact/_addressblock.html:11
+msgid "Not set"
+msgstr "Nu este setat"
+
+#: templates/contact/login_signup.html:13
+#: templates/contact/login_signup_address.html:40
+msgid "Login, or sign up to the store"
+msgstr "Autentifică-te sau înregistrează-te"
+
+#: templates/contact/login_signup.html:21
+#: templates/contact/login_signup_address.html:48
+msgid "Existing members login"
+msgstr "Autentificare membrii existenți"
+
+#: templates/contact/login_signup.html:32
+#: templates/contact/login_signup_address.html:61
+msgid "Email Address:"
+msgstr "Adresa de email:"
+
+#: templates/contact/login_signup.html:41
+#: templates/contact/login_signup_address.html:69
+msgid "Password:"
+msgstr "Parola:"
+
+#: templates/contact/login_signup.html:50
+#: templates/contact/login_signup_address.html:77
+#: templates/registration/login.html:23
+msgid "Login"
+msgstr "Autentificare"
+
+#: templates/contact/login_signup.html:63
+#: templates/contact/login_signup_address.html:90
+msgid "New Members, Create Your Account Below"
+msgstr "Membru nou, crează-ți contul mai jos"
+
+#: templates/contact/login_signup.html:69
+#: templates/contact/login_signup_address.html:96
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Vă rugăm să corectați eroarea de mai jos."
+msgstr[1] "Vă rugăm să corectați erorile de mai jos."
+msgstr[2] "Vă rugăm să corectați erorile de mai jos."
+
+#: templates/contact/login_signup.html:87
+#: templates/contact/login_signup_address.html:118
+msgid "Sign me up for Email Updates about new products and special offers!"
+msgstr ""
+"Înscrieți-mă pentru actualizări pe email despre noile produse si oferte "
+"speciale!"
+
+#: templates/contact/login_signup.html:93
+#: templates/contact/login_signup_address.html:193
+msgid "Create"
+msgstr "Creați"
+
+#: templates/contact/login_signup_address.html:114
+#: templates/contact/update_form.html:69
+msgid "Phone number"
+msgstr "Număr de telefon"
+
+#: templates/contact/login_signup_address.html:126
+#: templates/contact/update_form.html:79
+msgid "Billing Information"
+msgstr "Informații de facturare"
+
+#: templates/contact/login_signup_address.html:128
+#: templates/contact/update_form.html:81
+msgid "Bill To"
+msgstr "Facturați pentru"
+
+#: templates/contact/login_signup_address.html:128
+#: templates/contact/login_signup_address.html:162
+#: templates/contact/update_form.html:81
+#: templates/contact/update_form.html:115
+msgid "If different from the first and last names above"
+msgstr "Dacă este diferită de numele de mai sus"
+
+#: templates/contact/login_signup_address.html:149
+#: templates/contact/login_signup_address.html:183
+#: templates/contact/update_form.html:102
+#: templates/contact/update_form.html:136
+msgid "Zipcode/Postcode"
+msgstr "Cod poștal"
+
+#: templates/contact/login_signup_address.html:157
+#: templates/contact/update_form.html:110
+msgid "Shipping Address"
+msgstr "Adresa de livrare"
+
+#: templates/contact/login_signup_address.html:162
+#: templates/contact/update_form.html:115
+msgid "Ship To"
+msgstr "Livați către"
+
+#: templates/contact/update_form.html:6 templates/contact/view_profile.html:7
+#: templates/registration/password_change_done.html:6
+#: templates/registration/password_change_form.html:6
+msgid "Account"
+msgstr "Cont"
+
+#: templates/contact/update_form.html:7
+msgid "Update Profile"
+msgstr "Actualizați profilul"
+
+#: templates/contact/update_form.html:42
+msgid "Your Profile"
+msgstr "Profilul dumneavoastră"
+
+#: templates/contact/update_form.html:44
+msgid "Please correct the following error:"
+msgstr "Vă rugăm să corectați următoarea eroare:"
+
+#: templates/contact/update_form.html:50
+msgid "You&apos;ll need to fill out at least the fields with a *"
+msgstr "Vă rugăm să complectați cel puțin unul dintre câmpurile marcate cu *"
+
+#: templates/contact/update_form.html:52
+msgid "Basic Information"
+msgstr "Informații de bază"
+
+#: templates/contact/update_form.html:53 templates/registration/login.html:17
+msgid "Email address"
+msgstr "Adresa de email"
+
+#: templates/contact/update_form.html:66
+msgid "Birthday"
+msgstr "Data nașterii"
+
+#: templates/contact/update_form.html:145
+msgid "Update"
+msgstr "Actualizați"
+
+#: templates/contact/view_profile.html:11
+#: templates/registration/account_info.html:9
+msgid "Your Account info"
+msgstr "Informațiile dumneavoastră"
+
+#: templates/contact/view_profile.html:14
+#: templates/registration/account_info.html:11
+#, python-format
+msgid "Welcome, %(full_name)s."
+msgstr "Bine ați venit, %(full_name)s."
+
+#: templates/contact/view_profile.html:17
+msgid "Your profile"
+msgstr "Profilul dumneavoastră"
+
+#: templates/contact/view_profile.html:19
+msgid "Email:"
+msgstr "Email:"
+
+#: templates/contact/view_profile.html:21
+msgid "Organization:"
+msgstr "Organizație:"
+
+#: templates/contact/view_profile.html:23
+msgid "Birthday:"
+msgstr "Data nașterii:"
+
+#: templates/contact/view_profile.html:25
+msgid "Newsletter:"
+msgstr "Newsletter:"
+
+#: templates/contact/view_profile.html:25
+msgid "Yes"
+msgstr "Da"
+
+#: templates/contact/view_profile.html:25
+msgid "No"
+msgstr "Nu"
+
+#: templates/contact/view_profile.html:27
+msgid "Billing Address:"
+msgstr "Adresa de facturare:"
+
+#: templates/contact/view_profile.html:28
+msgid "Shipping Address:"
+msgstr "Adresa de livrare:"
+
+#: templates/contact/view_profile.html:30
+#: templates/contact/view_profile.html:43
+#: templates/registration/account_info.html:13
+msgid "Account options"
+msgstr "Setarile contului"
+
+#: templates/contact/view_profile.html:32
+msgid "Update your profile"
+msgstr "Actualizați-vă profilul"
+
+#: templates/contact/view_profile.html:34
+#: templates/contact/view_profile.html:47
+#: templates/registration/account_info.html:15
+#: templates/registration/password_change_form.html:11
+msgid "Change your password"
+msgstr "Schimbați parola"
+
+#: templates/contact/view_profile.html:36
+msgid "Order History"
+msgstr "Istoric comenzi"
+
+#: templates/contact/view_profile.html:41
+msgid ""
+"Sorry, the user you've logged in as doesn't have any contact information."
+msgstr ""
+"Ne pare rău, utilizatorul cu care v-ați logat nu are informațiile de contact"
+" complectate."
+
+#: templates/contact/view_profile.html:41
+msgid "Probably because you are an admin."
+msgstr "Probabil pentru că sunteți un administrator."
+
+#: templates/contact/view_profile.html:45
+msgid "Set up contact information"
+msgstr "Complectați informațiile de contact"
+
+#: templates/registration/activate.html:7
+msgid "Registration Complete"
+msgstr "Înregistrare completă"
+
+#: templates/registration/activate.html:12
+#: templates/registration/repeat_activation.html:11
+msgid "Account Activation"
+msgstr "Activare cont"
+
+#: templates/registration/activate.html:16
+msgid "Thanks for signing up! You are now logged in."
+msgstr "Vă mulțumim pentru înregistrare! Acum sunteți logat."
+
+#: templates/registration/activate.html:17
+#, python-format
+msgid "In the future, you can log in using your email address (%(email)s)."
+msgstr ""
+"În viitor, puteţi să vă autentificați utilizând adresa dvs. de email ( "
+"%(email)s )."
+
+#: templates/registration/activate.html:21
+#, python-format
+msgid ""
+"Either your activation link was incorrect, or the activation key for your "
+"account has expired. Activation keys are only valid for %(expiration_days)s "
+"days after registration."
+msgstr ""
+"Fie linkul de activare a fost incorect, fie cheia de activare pentru contul "
+"dvs. a expirat. Cheile de activare sunt valabile doar pentru "
+"%(expiration_days)s zile de la înregistrare."
+
+#: templates/registration/activation_email.txt:1
+#, python-format
+msgid ""
+"Someone, hopefully you, signed up for a new account at %(site)s using this "
+"email address. If it was you, and you'd like to activate and use your "
+"account, click the link below or copy and paste it into your web browser's "
+"address bar."
+msgstr ""
+"Pentru a activa noul cont %(site)s vă rugăm să faceți click pe link-ul de "
+"mai jos sau să copiați adresa în browserul dumneavoastră."
+
+#: templates/registration/activation_email.txt:5
+#, python-format
+msgid ""
+"If you didn't request this, you don't need to do anything; you won't receive"
+" any more email from us, and the account will expire automatically in "
+"%(expiration_days)s days."
+msgstr ""
+"Dacă nu v-ați înregistrat dumneavoastră pe acest site, nu trebuie să faceți "
+"nimic, nu veți mai primi alte emailuri de la noi și contul va expira automat"
+" în %(expiration_days)s zile. "
+
+#: templates/registration/login.html:19
+msgid "Password"
+msgstr "Parola"
+
+#: templates/registration/login.html:32
+msgid "If you do not have an account, please"
+msgstr "Dacă nu aveți cont, vă rugăm să"
+
+#: templates/registration/login.html:32
+msgid "click here"
+msgstr "faceți click aici"
+
+#: templates/registration/login.html:33
+msgid "If you do not remember your password, please"
+msgstr "Dacă nu vă amintiți parola, vă rugăm să"
+
+#: templates/registration/login.html:33
+msgid "click here</a> to have it reset."
+msgstr "faceți click aici</a> pentru resetare."
+
+#: templates/registration/logout.html:9
+msgid "You have been successfully logged out."
+msgstr "Ați fost deconectat."
+
+#: templates/registration/password_change_done.html:7
+msgid "Password Change Done"
+msgstr "Parola a fost schimbată"
+
+#: templates/registration/password_change_done.html:12
+msgid "Password change successful"
+msgstr "Parola a fost schimbată."
+
+#: templates/registration/password_change_done.html:14
+msgid "Your password change has been completed."
+msgstr "Schimbarea parolei dumneavoastră a fost efectuată."
+
+#: templates/registration/password_change_form.html:7
+msgid "Password Change"
+msgstr "Schimbare parolă"
+
+#: templates/registration/password_change_form.html:12
+msgid ""
+"For the sake of security, please enter your old password, and then enter "
+"your new password twice."
+msgstr "Vă rugăm introduceți vechea parolă, apoi noua parolă de două ori."
+
+#: templates/registration/password_change_form.html:19
+msgid "Old password"
+msgstr "Parola veche"
+
+#: templates/registration/password_change_form.html:26
+msgid "New password"
+msgstr "Parola nouă"
+
+#: templates/registration/password_change_form.html:33
+msgid "Confirm new password"
+msgstr "Confirmați noua parolă"
+
+#: templates/registration/password_change_form.html:36
+msgid "Change password"
+msgstr "Schimbare parolă"
+
+#: templates/registration/password_reset.txt:2
+msgid "You're receiving this e-mail because you requested a password reset"
+msgstr "Ați primit acest email deoarece ați cerut resetarea parolei"
+
+#: templates/registration/password_reset.txt:3
+#, python-format
+msgid "for your user account at %(site_name)s"
+msgstr "pentru contul dumneavoastră pe site-ul %(site_name)s"
+
+#: templates/registration/password_reset.txt:5
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+"Vă rugăm să mergeți la adresa următoare pentru alegerea unei alte parole:"
+
+#: templates/registration/password_reset.txt:9
+msgid "Your username, in case you've forgotten:"
+msgstr "Numele dumneavoastră de utilizator este:"
+
+#: templates/registration/password_reset.txt:11
+msgid "Thanks for using our site!"
+msgstr "Vă mulțumim!"
+
+#: templates/registration/password_reset.txt:13
+#, python-format
+msgid "The %(site_name)s team"
+msgstr "Echipa %(site_name)s"
+
+#: templates/registration/password_reset_done.html:10
+msgid "Password reset successful"
+msgstr "Parola a fost resetată"
+
+#: templates/registration/password_reset_done.html:12
+msgid ""
+"We've e-mailed a new password to the e-mail address you submitted. You "
+"should receive it shortly."
+msgstr "V-am trimis un email cu o nouă parolă."
+
+#: templates/registration/password_reset_form.html:10
+msgid "Reset your password"
+msgstr "Resetează parola"
+
+#: templates/registration/password_reset_form.html:12
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send a "
+"new password to you."
+msgstr ""
+"Ați uitat parola? Complectați adresa de email mai jos și vă vom trimite o "
+"nouă parolă."
+
+#: templates/registration/password_reset_form.html:19
+msgid "E-mail address"
+msgstr "Adresa de email"
+
+#: templates/registration/password_reset_form.html:20
+msgid "Be sure to enter the same e-mail address you used to register."
+msgstr ""
+"Asigurați-vă că ați folosit aceeași adresă de email cu cea pe care ați "
+"folosit-o la înregistrare."
+
+#: templates/registration/password_reset_form.html:21
+msgid "Reset password"
+msgstr "Resetare parolă"
+
+#: templates/registration/registration_complete.html:7
+#: templates/registration/registration_complete.html:11
+msgid "Account Creation"
+msgstr "Creare cont"
+
+#: templates/registration/registration_complete.html:12
+msgid "Thank you for signing up."
+msgstr "Vă mulțumim pentru înregistrare."
+
+#: templates/registration/registration_complete.html:14
+msgid ""
+"An activation link has been sent to the email address you supplied, along "
+"with instructions for activating your account."
+msgstr ""
+"Un link de activare a fost trimis pe adresa de email complectată împreună cu"
+" instrucțiuni pentru activarea contului."
+
+#: templates/registration/registration_form.html:6
+msgid "Registration"
+msgstr "Înregistrare"
+
+#: templates/registration/registration_form.html:10
+msgid "Please Enter Your Account Information"
+msgstr "Vă rugăm să introduceți informațiile dumneavoastră"
+
+#: templates/registration/registration_form.html:38
+msgid "Create Account"
+msgstr "Creare cont"
+
+#: templates/registration/repeat_activation.html:6
+msgid "Repeat Activation"
+msgstr "Repetați activarea contului"
+
+#: templates/registration/repeat_activation.html:13
+msgid "This account has already been activated. Please login."
+msgstr "Acest cont a fost deja activat. Vă puteți autentifica."
+
+#: templates/registration/welcome.txt:1
+#, python-format
+msgid "Dear %(first_name)s %(last_name)s,"
+msgstr "Dragă %(last_name)s %(first_name)s,"
+
+#: templates/registration/welcome.txt:3
+#, python-format
+msgid "Thank you for signing up with %(company_name)s."
+msgstr "Vă mulțumim că v-ați înregistrat la %(company_name)s."
+
+#: templates/registration/welcome.txt:5
+msgid "Your new username is this email address, and you can login at"
+msgstr "Vă puteți autentifica cu această adresă de email la"
+
+#: templates/registration/welcome.txt:7
+msgid "Regards"
+msgstr "O zi bună"
+
+#: templates/registration/welcome.txt:9
+msgid "Store Management"
+msgstr "Echipa de management"
+
+

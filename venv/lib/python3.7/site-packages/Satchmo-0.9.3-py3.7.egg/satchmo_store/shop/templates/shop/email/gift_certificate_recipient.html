@@ -1,0 +1,17 @@
+{% load i18n satchmo_currency satchmo_discounts %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title></title></head>
+<body style="font-family:'Helvetica Neue', Helvetica, Arial;font-size:90%;">
+<h1>{{ shop_name}}</h1>
+
+<p>{% blocktrans %}Congratulations, you have received a gift certificate for {{ shop_name }}.{% endblocktrans %}</p>
+<p>{% trans "Your gift certificate was purchased by"%} {{purchased_by.full_name}}.</p>
+<p>{% trans "This gift certificate is for" %} {{ balance|currency }} {% trans "and may be redeemed online using the following code" %} {{code}}</p>
+{% if message %}
+    <p>{% blocktrans %}This gift certificate includes the following message: {% endblocktrans %}</p>
+    <blockquote>{{ message|linebreaksbr }}</blockquote>
+{% endif %}
+<p>{% trans "Regards" %},</p>
+<p>{% trans "Store Management" %}</p>
+
+</body>
+</html>

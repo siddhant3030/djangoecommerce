@@ -1,0 +1,101 @@
+Satchmo Development Branch
+==========================
+
+These are the notes for the development version of Satchmo.
+
+
+New Features
+------------
+ * upgraded to use the latest Sorl Thumbnail code. Please review the migration notes
+ * Added Paypal Payflowpro payment module
+ * Updated all templates to use `Django static files <https://docs.djangoproject.com/en/dev/howto/static-files/>`_
+ * Send email to gift certificate recipients
+ * Rewrite PDF (document) generation, removed trml2pdf and Reportlab dependencies: please see :ref:`document_settings_trml2pdf` and the migration notes when upgrading
+ * Updated to using django-registration 0.8
+  
+
+Translations
+------------
+ * Italian updates
+ * Russian updates
+
+Bug Fixes
+---------
+ * Make variation manager more robust so that you can't delete an order when deleting the variation.
+ * Javascript updates for newer jquery
+ * Fix bug with required login not working
+ * Ensure TRACK_INVENTORY is used in all payment modules
+ * Updated cache settings to use the new format
+ * Multiple minor bug cleanups and fixes
+ * Update views to use new class-based generic views
+ * Update Satchmo to use Django's timezone support
+ * Fixes to thumbnail widget paths
+ * Fix shipping tax config
+ 
+Performance Improvements
+------------------------
+ * DB optimizations using new prefetch_related from Django 1.4 
+ * Tweaks to product ratings
+ 
+Additional Notes
+-----------------
+ * Remove django-signals-ahoy as a dependency
+
+Migration Notes
+---------------
+
+PDF generation
+++++++++++++++
+
+If you wish to maintain the ``trml2pdf`` PDF generation (recommended if you
+have customized templates) for invoices, packing slips and shipping labels,
+you must set the ``'DOCUMENT_CONVERTER'`` key
+within ``SATCHMO_SETTINGS`` to ``'shipping.views.TRMLDocument'``::
+
+    SATCHMO_SETTINGS = {
+        ...
+        'DOCUMENT_CONVERTER': 'shipping.views.TRMLDocument',
+        ...
+    }
+
+You should also move your templates, as the following template renames happened
+(here is indicated only the *template path*, from ``templates/`` onward):
+
+    * ``shop/pdf/invoice.rml`` → ``shop/docs/rml/invoice.rml``
+    * ``shop/pdf/packing-slip.rml`` → ``shop/docs/rml/packingslip.rml``
+    * ``shop/pdf/shipping-label.rml`` → ``shop/docs/rml/shippinglabel.rml``
+
+See :ref:`document_settings_trml2pdf` for more details.
+
+Sorl Thumbnail
+++++++++++++++
+In `rev 2449 <http://bitbucket.org/chris1610/satchmo/changeset/9fb522d26404>`_ Satchmo is updated to use the latest Sorl Thumbnail code.
+
+The primary change is that all custom templates that reference images, will need to be changed to support Sorl's updated syntax. 
+A typical example of an old template tag looks like this::
+
+    {% thumbnail pic.picture 280x280 as image %}
+    <img src="{{ image }}" width="{{ image.width }}" height="{{ image.height }}" />
+    
+Templates need to be updated to support the endthumbnail tag::
+
+    {% thumbnail pic.picture "280x280" as image %}
+    <img src="{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}" />
+    {% endthumbnail %}
+
+Also, after upgrading to the latest Sorl Thumbnail code, you must remember to do a syncdb to create Sorl's cache table.
+
+This upgrade allows Satchmo to utilize all the latest features in Sorl. You are encouraged to read `Sorl's docs <http://thumbnail.sorl.net/index.html>`_ in order to determine 
+which ones you'd like to include in your store.
+
+Django Static Files
++++++++++++++++++++
+In `rev 2476 <https://bitbucket.org/chris1610/satchmo/changeset/3848d39b63c0>`_ Satchmo is updated to use Django's static files. If you have made any changes to templates, you'll need to make sure
+to replace references top media_url with STATIC_URL. Here is an example of the original template::
+
+    <script src="{{media_url}}js/jquery.cookie.js" type="text/javascript"></script>
+    
+Here is the new template::
+    
+    <script src="{{ STATIC_URL }}js/jquery.cookie.js" type="text/javascript"></script>
+    
