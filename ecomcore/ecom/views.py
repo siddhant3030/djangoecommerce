@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from .models import Item
 
-# def products(request):
-#     context = {
-#         'items': Item.objects.all()
-#     }
-#     return render(request, "products.html", context)
+def products(request):
+    context = {
+        'items': Item.objects.all()
+    }
+    return render(request, "products.html", context)
 
-def item_list(request):
+def home(request):
     context = {
         'items': Item.Objects.all()
     }
