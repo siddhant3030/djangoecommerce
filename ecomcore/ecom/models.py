@@ -31,6 +31,7 @@ class OrderItem(models.Model):
 
 class Order(models.Model):
     title = models.CharField(max_length = 100)
+    description = models.CharField(max_length = 100)
     items = models.ManyToManyField(OrderItem)
     start_date = models.DateTimeField(auto_now_add=True)
     ordered_date = models.DateTimeField()
