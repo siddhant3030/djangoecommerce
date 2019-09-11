@@ -29,18 +29,23 @@ class Item(models.Model):
 
     def get_absolute_url(self):
         return reverse("ecom:product", kwargs={"slug": self.slug})
+
+    def get_add_to_cart_url(self):
+        return reverse("ecom:add_to_cart", kwargs={"slug": self.slug})
+
     
 
 class OrderItem(models.Model):
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
-    title = models.CharField(max_length = 100)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    ordered = models.BooleanField(default=False)
     quantity = models.IntegerField(default=1)
     def _str_(self):
-        return self.title
+        return f"{self.quantity} of {self.item.title}"
 
 
 class Order(models.Model):
-    title = models.CharField(max_length = 100)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True, null=True)
     description = models.CharField(max_length = 100)
     items = models.ManyToManyField(OrderItem)
     start_date = models.DateTimeField(auto_now_add=True)
@@ -48,5 +53,5 @@ class Order(models.Model):
     ordered = models.BooleanField(default=False)
     
     def _str_(self):
-        return self.title
+        return self.user.username
 
