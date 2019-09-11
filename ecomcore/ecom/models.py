@@ -21,6 +21,8 @@ class Item(models.Model):
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)
     label = models.CharField(choices=LABEL_CHOICES, max_length=1)
     slug = models.SlugField()
+    description = models.TextField()
+    
 
     def _str_(self):
         return self.title
@@ -32,6 +34,7 @@ class Item(models.Model):
 class OrderItem(models.Model):
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
     title = models.CharField(max_length = 100)
+    quantity = models.IntegerField(default=1)
     def _str_(self):
         return self.title
 
