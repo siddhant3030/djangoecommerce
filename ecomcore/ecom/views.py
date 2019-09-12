@@ -25,6 +25,10 @@ class ItemDetailView(DetailView):
     model = Item
     template_name = "product.html"
 
+class OrderSummaryView(DetailView):
+    model = Order
+    template_name = "order_summary.html"
+
 def add_to_cart(request, slug):
     item = get_object_or_404(Item, slug=slug)
     order_item, created = OrderItem.objects.get_or_create(
@@ -50,7 +54,7 @@ def add_to_cart(request, slug):
     return redirect("ecom:product", slug=slug)
 
 
-def remove_from_car(reqest, slug):
+def remove_from_cart(reqest, slug):
     item = get_object_or_404(Item, slug=slug)
     order_qs = Order.objects.filter(
         user=request.user,
