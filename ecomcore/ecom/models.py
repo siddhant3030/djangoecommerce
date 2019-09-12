@@ -33,6 +33,9 @@ class Item(models.Model):
     def get_add_to_cart_url(self):
         return reverse("ecom:add_to_cart", kwargs={"slug": self.slug})
 
+    def get_remove_from_cart_url(self):
+        return reverse("ecom:remove_from_cart", kwargs={"slug": self.slug})
+
     
 
 class OrderItem(models.Model):
