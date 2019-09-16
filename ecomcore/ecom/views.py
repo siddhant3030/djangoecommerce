@@ -35,7 +35,7 @@ class OrderSummaryView(LoginRequiredMixin, View):
             context = {
                 'object': order
             }
-            return render(self.request, 'order_summary.html', context)
+            return render(self.request, 'order_summary.html',)
         except ObjectDoesNotExist:
             messages.error(self.request, "You don't have an active order")
             return redirect("/")
@@ -83,6 +83,34 @@ def remove_from_cart(reqest, slug):
             order.items.remove.(order_item)
             messages.info(request, "This item was removed from your cart")
             return redirect("ecom:product", slug=slug)
+        else:
+            messages.info(request, "This item was not in your cart")
+            return redirect("ecom:product", slug=slug)
+    else:
+        messages.info(request, "You do not have any orders")
+         return redirect("ecom:product", slug=slug)
+    
+
+@login_required
+def remove_single_item_from_cart(reqest, slug):
+    item = get_object_or_404(Item, slug=slug)
+    order_qs = Order.objects.filter(
+        user=request.user,
+        ordered=False
+    )
+    if order_qs.exists():
+        order = order_qs[0]
+        if order.items.filter(item_slug=item.slug).exists():
+            OrderItem.objects.filter(
+                item=item,
+                user=request.user,
+                ordered=False
+            )[0]
+            order_item.quantity -= 1
+            order_item.save()
+            order.items.remove.(order_item)
+            messages.info(request, "The item quantity was updated")
+            return redirect("ecom:order-summary", slug=slug)
         else:
             messages.info(request, "This item was not in your cart")
             return redirect("ecom:product", slug=slug)
