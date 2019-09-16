@@ -1,6 +1,9 @@
 from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, View
 from .models import Item, OrderItem, Order
 from django.shortcuts import redirect
 from django.utils import timezone
@@ -25,10 +28,19 @@ class ItemDetailView(DetailView):
     model = Item
     template_name = "product.html"
 
-class OrderSummaryView(DetailView):
-    model = Order
-    template_name = "order_summary.html"
-
+class OrderSummaryView(LoginRequiredMixin, View):
+    def get(self, *args, **kwargs):
+        try:
+            order = Order.objects.get(user=self.request.user, ordered=False)
+            context = {
+                'object': order
+            }
+            return render(self.request, 'order_summary.html', context)
+        except ObjectDoesNotExist:
+            messages.error(self.request, "You don't have an active order")
+            return redirect("/")
+    
+@login_required
 def add_to_cart(request, slug):
     item = get_object_or_404(Item, slug=slug)
     order_item, created = OrderItem.objects.get_or_create(
@@ -53,7 +65,7 @@ def add_to_cart(request, slug):
         messages.info(request, "This item was added to your cart")
     return redirect("ecom:product", slug=slug)
 
-
+@login_required
 def remove_from_cart(reqest, slug):
     item = get_object_or_404(Item, slug=slug)
     order_qs = Order.objects.filter(
@@ -66,13 +78,14 @@ def remove_from_cart(reqest, slug):
             OrderItem.objects.filter(
                 item=item,
                 user=request.user,
-                ordered=False)[0]
+                ordered=False
+            )[0]
             order.items.remove.(order_item)
             messages.info(request, "This item was removed from your cart")
             return redirect("ecom:product", slug=slug)
         else:
             messages.info(request, "This item was not in your cart")
-             return redirect("ecom:product", slug=slug)
+            return redirect("ecom:product", slug=slug)
     else:
         messages.info(request, "You do not have any orders")
          return redirect("ecom:product", slug=slug)
