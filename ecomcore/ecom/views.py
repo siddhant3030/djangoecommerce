@@ -110,10 +110,9 @@ def remove_single_item_from_cart(reqest, slug):
             )[0]
             if order_item > 1:
                 order_item.quantity -= 1
+                order_item.save()
             else:
                 order.items.remove(order_item)
-            order_item.save()
-            order.items.remove.(order_item)
             messages.info(request, "The item quantity was updated")
             return redirect("ecom:order-summary", slug=slug)
         else:
