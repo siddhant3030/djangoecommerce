@@ -108,7 +108,7 @@ def remove_single_item_from_cart(reqest, slug):
                 user=request.user,
                 ordered=False
             )[0]
-            if order_item > 1:
+            if order_item.quantity > 1:
                 order_item.quantity -= 1
                 order_item.save()
             else:
