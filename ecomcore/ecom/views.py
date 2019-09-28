@@ -135,7 +135,8 @@ class CheckoutView(View):
     def post(self, *args, **kwargs)
         form = CheckoutForm(self.requestPost or None)
         if form.is_valid():
+            print(form.cleaned_data)
             print("The form is valid")
             return redirect('ecom:checkout')
-            
+
 
