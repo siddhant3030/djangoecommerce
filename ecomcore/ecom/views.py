@@ -6,6 +6,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, View
 from .models import Item, OrderItem, Order
 from django.shortcuts import redirect
+from .forms import CheckoutForm
 from django.utils import timezone
 
 def products(request):
@@ -122,6 +123,19 @@ def remove_single_item_from_cart(reqest, slug):
         messages.info(request, "You do not have any orders")
          return redirect("ecom:product", slug=slug)
     
-# def checkout(request):
-#     return render(request, "checkout.html")
+class CheckoutView(View):
+    def get(self, *args, **kwargs)
+        #form
+        form = CheckoutForm()
+        context = {
+            'form': form
+        }
+        return render(request, "checkout.html", context)
+
+    def post(self, *args, **kwargs)
+        form = CheckoutForm(self.requestPost or None)
+        if form.is_valid():
+            print("The form is valid")
+            return redirect('ecom:checkout')
+            
 
