@@ -13,7 +13,7 @@ django-countries==5.5
 django-crispy-forms==1.7.2
 django-keyedcache==1.5.1
 django-livesettings==1.4.post16
-django-registration==3.0.1
+django-registration==3.1.2
 docutils==0.15.2
 fedex==2.4.0
 idna==2.8
